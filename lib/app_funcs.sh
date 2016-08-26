@@ -53,6 +53,7 @@ function app_dependencies() {
 
   output_section "Compiling app dependencies"
   mix deps.compile || exit 1
+  mix compile --force || exit 1
 
   export GIT_DIR=$git_dir_value
   cd - > /dev/null
