@@ -27,7 +27,7 @@ function copy_hex() {
 
     # For older versions of hex which have no version name in file
     if [ -z "$full_hex_file_path" ]; then
-      full_hex_file_path=$(ls -t ${HOME}/.mix/archives/hex-*.ez | head -n 1)
+      full_hex_file_path=$(ls -t ${HOME}/.mix/archives/hex-0.13.0.ez | head -n 1)
     fi
   fi
 
