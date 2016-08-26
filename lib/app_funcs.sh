@@ -34,11 +34,12 @@ function copy_hex() {
   cp ${HOME}/.hex/registry.ets ${build_path}/.hex/
 
   output_section "List directory in /home/vcap/.mix/archives/"
-  ls /home/vcap/.mix/archives/
+  ls ${HOME}/.mix/archives/
+  output_section "List build_path"
   ls ${build_path}
 
   output_section "Copying hex from $full_hex_file_path"
-  cp -r $full_hex_file_path ${build_path}/.mix/archives
+  cp -r ${HOME}/.mix/archives/$full_hex_file_path ${build_path}/.mix/archives
 }
 
 
