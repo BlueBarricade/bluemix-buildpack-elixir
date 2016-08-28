@@ -87,6 +87,11 @@ function compile_app() {
   mix compile --force || exit 1
   mix compile.protocols || exit 1
 
+  if [ $with_seed = true ]; then
+  	output_section "Running db seed"
+    mix run priv/repo/seeds.exs || exit 1
+  fi
+
   export GIT_DIR=$git_dir_value
   cd - > /dev/null
 }
